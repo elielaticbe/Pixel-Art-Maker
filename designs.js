@@ -1,11 +1,14 @@
 let height, width, color;
 // Select color input
+
 $('#pixelCanvas').on('click','td', function(event){
 	color = $('#colorPicker').val();
 	$(event.target).css('background-color', color);
 });
 
 // Select size input
+// When size is submitted by the user, call makeGrid()
+
 $("#sizePicker").submit(function(event){
 	event.preventDefault();
 	height = $("#inputHeight").val();
@@ -14,11 +17,11 @@ $("#sizePicker").submit(function(event){
 	//console.log(height+"and"+width);
 });
 
-// When size is submitted by the user, call makeGrid()
 
 function makeGrid(h,w) {
-
+	
 // Your code goes here!
+	
 for(let h = 1; h<=height; h++){
 	$('#pixelCanvas').append('<tr></tr>');
 }
